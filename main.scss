@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+.tattoo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 5%;
+  gap: 3rem;
+}
+
+/* --- Columna de texto --- */
+.info {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #cc0000;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ccc;
+  }
+
+  button {
+    margin-top: 2rem;
+    background-color: #009999;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #006666;
+    }
+  }
+}
+
+/* --- Columna de imagen --- */
+.imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+/* --- Animación de cambio --- */
+.fade-out {
+  opacity: 0;
+}
+.fade-in {
+  opacity: 1;
+}
+.hero {
+  background: url(hero/fc78a4599d3717a0609565721df78414.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh; /* ocupa toda la altura de la pantalla */
+  position: relative;
+}
+
+/* Capa oscura encima de la imagen para que el texto resalte */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(216, 19, 19, 0.144); /* tu color vino con opacidad */
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+// Estilos de la barra superior (logo)
+.navbar-top {
+  background-color: #c00707;
+  padding: 0.5rem 1rem;
+
+  .navbar-brand {
+    color: #99cccc;
+    font-weight: bold;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+// Estilos de la barra principal (menú)
+.navbar-main {
+  background-color: #c00707;
+  padding: 1rem;
+
+  .nav-link {
+    color: white;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #99cccc;
+    }
+  }
+}
