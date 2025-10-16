@@ -51,22 +51,15 @@ body {
 }
 
 /* --- Columna de imagen --- */
-.imagen {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-
-  img {
-    width: 100%;
-    max-width: 500px;
-    height: 70vh;
-    object-fit: cover;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    transition: opacity 0.5s ease-in-out;
-  }
+.imagen img {
+  width: 120%;           // hace la imagen más ancha dentro de su contenedor
+  max-width: 550px;      // evita que se desborde demasiado
+  height: auto;          // conserva la proporción original
+  object-fit: contain;   // mantiene la relación ancho/alto sin recorte
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.5s ease-in-out;
 }
-
 /* --- Animación de cambio --- */
 .fade-out {
   opacity: 0;
@@ -123,6 +116,39 @@ body {
 
     &:hover {
       color: #99cccc;
+    }
+  }
+}
+.tattoo-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 4rem 0;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+  .info {
+    flex: 1;
+    padding: 1rem 2rem;
+  }
+
+ .imagen img {
+  width: 120%;           // hace la imagen más ancha dentro de su contenedor
+  max-width: 550px;      // evita que se desborde demasiado
+  height: auto;          // conserva la proporción original
+  object-fit: contain;   // mantiene la relación ancho/alto sin recorte
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.5s ease-in-out;
+}
+
+  &.invertido {
+    flex-direction: row-reverse;
+
+    .imagen {
+      text-align: left;
     }
   }
 }

@@ -48,17 +48,12 @@ body {
 }
 
 /* --- Columna de imagen --- */
-.imagen {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
 .imagen img {
-  width: 100%;
-  max-width: 500px;
-  height: 70vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 120%;
+  max-width: 550px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   transition: opacity 0.5s ease-in-out;
@@ -119,4 +114,35 @@ body {
 }
 .navbar-main .nav-link:hover {
   color: #99cccc;
+}
+
+.tattoo-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 4rem 0;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.tattoo-section .info {
+  flex: 1;
+  padding: 1rem 2rem;
+}
+.tattoo-section .imagen img {
+  width: 120%;
+  max-width: 550px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.5s ease-in-out;
+}
+.tattoo-section.invertido {
+  flex-direction: row-reverse;
+}
+.tattoo-section.invertido .imagen {
+  text-align: left;
 }/*# sourceMappingURL=main.css.map */
